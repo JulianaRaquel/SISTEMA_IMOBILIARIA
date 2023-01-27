@@ -11,7 +11,7 @@ def cadastro(request):
             return redirect('/home')
         return render(request, 'cadastro.html')
     elif request.method == "POST":
-        usuario = request.POST.get('username')
+        usuario = request.POST.get('usuario')
         email = request.POST.get('email')
         senha = request.POST.get('senha')
 
@@ -35,13 +35,15 @@ def cadastro(request):
             messages.add_message(request, constants.ERROR, 'Usuário, e-mail ou senha não podem estar em branco')
             return redirect('/cadastro')
 
-        usuario = User.objects.filter(username=usuario)
-        if usuario:
+        usuario1 = User.objects.filter(username=usuario)
+
+        if usuario1:
             messages.add_message(request, constants.ERROR, 'Esse usuário já existe')
             return redirect('/cadastro')
 
-        email = User.objects.filter(email=email)
-        if email:
+        email1 = User.objects.filter(email=email)
+
+        if email1:
             messages.add_message(request, constants.ERROR, 'Esse endereço de e-mail já está cadastrado')
             return redirect('/cadastro')
 

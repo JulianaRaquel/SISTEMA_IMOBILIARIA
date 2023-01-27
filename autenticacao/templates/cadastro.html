@@ -51,11 +51,10 @@
                     <form action="{% url 'cadastro' %}" method="POST">{% csrf_token %}
                         <h2 class="titulo_area_cadastrar">Cadastre-se</h2>
                         <br>
-                        <input name="username" class="input_cadastrar input_cadastrar_nome" type="text" placeholder="Usuario">
-
+                        <input name="usuario" class="input_cadastrar input_cadastrar_nome" type="text" placeholder="Usuario">
                         <br>
                         <br>
-                        <input name="email" class="input_cadastrar input_cadastrar_email" type="text" placeholder="Email">
+                        <input name="email" class="input_cadastrar input_cadastrar_email" type="email" placeholder="Email">
                         <br>
                         <br>
                         <input name="senha" class="input_cadastrar input_cadastrar_senha" type="password" placeholder="Senha">
