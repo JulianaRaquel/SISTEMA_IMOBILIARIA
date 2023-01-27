@@ -38,7 +38,7 @@ def cadastro(request):
         usuario1 = User.objects.filter(username=usuario)
 
         if usuario1:
-            messages.add_message(request, constants.ERROR, 'Esse usuário já existe')
+            messages.add_message(request, constants.ERROR, 'Esse usuário já existe !!!')
             return redirect('/cadastro')
 
         email1 = User.objects.filter(email=email)
