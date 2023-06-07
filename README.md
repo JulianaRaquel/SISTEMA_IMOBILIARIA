@@ -2,6 +2,13 @@
 
 ### **Objetivo**: desenvolver um sistema de exposição de imóveis para venda e aluguel.
 
+## Tecnologias Utilizadas:
+* ###  Python
+* ### Django
+* ### Git
+* ### PostgreSQL
+* ### Docker
+
 ## Funcionalidades do Projeto
 
 #### 1. Sistema de cadastro de usuário com username e-mail e senha (http://127.0.0.1:8000/cadastro/)
